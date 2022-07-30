@@ -1,0 +1,11 @@
+Tw_Notion_ids: !!python/object:bidict.bidict
+  _fwdm: &id001
+    91c928d2-ae71-4907-a998-0adf3af9ebeb: c99b45fb-9dc1-4b7c-9e6b-e66a115d9986
+    978d08f0-9bb9-4559-9ff4-6ea2ef2189df: 1cb8bc20-634b-4af7-afc5-586ffaf4d95c
+  _inv: !!python/object:bidict.bidict
+    _fwdm: &id002
+      1cb8bc20-634b-4af7-afc5-586ffaf4d95c: 978d08f0-9bb9-4559-9ff4-6ea2ef2189df
+      c99b45fb-9dc1-4b7c-9e6b-e66a115d9986: 91c928d2-ae71-4907-a998-0adf3af9ebeb
+    _inv: null
+    _invm: *id001
+  _invm: *id002

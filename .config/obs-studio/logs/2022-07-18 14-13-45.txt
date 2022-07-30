@@ -1,0 +1,210 @@
+14:13:45.418: CPU Name: Intel(R) Core(TM) i3-10100F CPU @ 3.60GHz
+14:13:45.418: CPU Speed: 1241.327MHz
+14:13:45.419: Physical Cores: 4, Logical Cores: 8
+14:13:45.419: Physical Memory: 15913MB Total, 8429MB Free
+14:13:45.419: Kernel Version: Linux 5.15.52-gentoo-dist
+14:13:45.419: Distribution: Gentoo "2.8"
+14:13:45.419: Session Type: x11
+14:13:45.419: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.21.1
+14:13:45.421: Qt Version: 5.15.5 (runtime), 5.15.5 (compiled)
+14:13:45.421: Portable mode: false
+14:13:45.471: OBS 27.2.4 (linux)
+14:13:45.471: ---------------------------------
+14:13:45.471: ---------------------------------
+14:13:45.471: audio settings reset:
+14:13:45.471: 	samples per sec: 48000
+14:13:45.471: 	speakers:        2
+14:13:45.474: ---------------------------------
+14:13:45.474: Initializing OpenGL...
+14:13:45.509: Loading up OpenGL on adapter NVIDIA Corporation NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2
+14:13:45.510: OpenGL loaded successfully, version 3.3.0 NVIDIA 510.73.05, shading language 3.30 NVIDIA via Cg compiler
+14:13:45.516: ---------------------------------
+14:13:45.516: video settings reset:
+14:13:45.516: 	base resolution:   1920x1080
+14:13:45.516: 	output resolution: 1280x720
+14:13:45.516: 	downscale filter:  Bicubic
+14:13:45.516: 	fps:               30/1
+14:13:45.516: 	format:            NV12
+14:13:45.516: 	YUV mode:          709/Partial
+14:13:45.516: NV12 texture support not available
+14:13:45.516: Audio monitoring device:
+14:13:45.516: 	name: Default
+14:13:45.516: 	id: default
+14:13:45.516: ---------------------------------
+14:13:45.517: Failed to load 'en-US' text for module: 'decklink-captions.so'
+14:13:45.517: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+14:13:45.530: v4l2loopback not installed, virtual camera disabled
+14:13:45.531: NVENC supported
+14:13:45.533: ---------------------------------
+14:13:45.533:   Loaded Modules:
+14:13:45.533:     rtmp-services.so
+14:13:45.533:     obs-x264.so
+14:13:45.533:     obs-transitions.so
+14:13:45.533:     obs-outputs.so
+14:13:45.533:     obs-filters.so
+14:13:45.533:     obs-ffmpeg.so
+14:13:45.533:     linux-v4l2.so
+14:13:45.533:     linux-pulseaudio.so
+14:13:45.533:     linux-capture.so
+14:13:45.533:     linux-alsa.so
+14:13:45.533:     image-source.so
+14:13:45.533:     frontend-tools.so
+14:13:45.533:     decklink-ouput-ui.so
+14:13:45.533:     decklink-captions.so
+14:13:45.533: ---------------------------------
+14:13:45.533: ==== Startup complete ===============================================
+14:13:45.556: All scene data cleared
+14:13:45.556: ------------------------------------------------
+14:13:45.557: pulse-input: Server name: 'pulseaudio 16.0'
+14:13:45.558: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+14:13:45.558: pulse-input: Started recording from 'alsa_output.usb-Kingston_HyperX_Quadcast_4110-00.analog-stereo.monitor'
+14:13:45.558: [Loaded global audio device]: 'Desktop Audio'
+14:13:45.558: pulse-input: Server name: 'pulseaudio 16.0'
+14:13:45.558: pulse-input: Audio format: s16le, 44100 Hz, 2 channels
+14:13:45.558: pulse-input: Started recording from 'alsa_input.usb-Kingston_HyperX_Quadcast_4110-00.analog-stereo'
+14:13:45.558: [Loaded global audio device]: 'Mic/Aux'
+14:13:45.558: xshm-input: Geometry 1920x1080 @ 0,0
+14:13:45.559: Switched to scene 'Scene'
+14:13:45.559: ------------------------------------------------
+14:13:45.559: Loaded scenes:
+14:13:45.559: - scene 'Scene':
+14:13:45.559:     - source: 'Screen Capture (XSHM)' (xshm_input)
+14:13:45.559: ------------------------------------------------
+14:13:46.105: adding 42 milliseconds of audio buffering, total audio buffering is now 42 milliseconds (source: Mic/Aux)
+14:13:46.105: 
+14:13:57.670: Starting recording due to hotkey
+14:13:57.673: ---------------------------------
+14:13:57.673: [NVENC encoder: 'simple_h264_stream'] settings:
+14:13:57.673: 	rate_control: CBR
+14:13:57.673: 	bitrate:      2500
+14:13:57.673: 	cqp:          0
+14:13:57.673: 	keyint:       250
+14:13:57.673: 	preset:       hq
+14:13:57.673: 	profile:      high
+14:13:57.673: 	width:        1280
+14:13:57.673: 	height:       720
+14:13:57.673: 	2-pass:       false
+14:13:57.673: 	b-frames:     2
+14:13:57.673: 	psycho-aq:    1
+14:13:57.673: 	GPU:          0
+14:13:57.673: 
+14:13:57.876: ---------------------------------
+14:13:57.876: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: 3
+14:13:57.876: 
+14:13:57.877: ==== Recording Start ===============================================
+14:13:57.877: [ffmpeg muxer: 'simple_file_output'] Writing file '/home/gfuentes/Videos/2022-07-18 14-13-57.mkv'...
+14:14:43.588: [ffmpeg muxer: 'simple_file_output'] Output of file '/home/gfuentes/Videos/2022-07-18 14-13-57.mkv' stopped
+14:14:43.588: Output 'simple_file_output': stopping
+14:14:43.588: Output 'simple_file_output': Total frames output: 1336
+14:14:43.588: Output 'simple_file_output': Total drawn frames: 1372
+14:14:43.589: ==== Recording Stop ================================================
+14:19:58.948: Starting recording due to hotkey
+14:19:58.949: ---------------------------------
+14:19:58.949: [NVENC encoder: 'simple_h264_stream'] settings:
+14:19:58.949: 	rate_control: CBR
+14:19:58.949: 	bitrate:      2500
+14:19:58.949: 	cqp:          0
+14:19:58.949: 	keyint:       250
+14:19:58.949: 	preset:       hq
+14:19:58.949: 	profile:      high
+14:19:58.949: 	width:        1280
+14:19:58.949: 	height:       720
+14:19:58.949: 	2-pass:       false
+14:19:58.949: 	b-frames:     2
+14:19:58.949: 	psycho-aq:    1
+14:19:58.949: 	GPU:          0
+14:19:58.949: 
+14:19:59.058: ---------------------------------
+14:19:59.058: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: 3
+14:19:59.058: 
+14:19:59.058: ==== Recording Start ===============================================
+14:19:59.058: [ffmpeg muxer: 'simple_file_output'] Writing file '/home/gfuentes/Videos/2022-07-18 14-19-58.mkv'...
+14:21:21.771: Stopping recording due to hotkey
+14:21:23.022: [ffmpeg muxer: 'simple_file_output'] Output of file '/home/gfuentes/Videos/2022-07-18 14-19-58.mkv' stopped
+14:21:23.022: Output 'simple_file_output': stopping
+14:21:23.022: Output 'simple_file_output': Total frames output: 2482
+14:21:23.022: Output 'simple_file_output': Total drawn frames: 2519
+14:21:23.022: ==== Recording Stop ================================================
+14:31:08.472: Starting recording due to hotkey
+14:31:08.474: ---------------------------------
+14:31:08.474: [NVENC encoder: 'simple_h264_stream'] settings:
+14:31:08.474: 	rate_control: CBR
+14:31:08.474: 	bitrate:      2500
+14:31:08.474: 	cqp:          0
+14:31:08.474: 	keyint:       250
+14:31:08.474: 	preset:       hq
+14:31:08.474: 	profile:      high
+14:31:08.474: 	width:        1280
+14:31:08.474: 	height:       720
+14:31:08.474: 	2-pass:       false
+14:31:08.474: 	b-frames:     2
+14:31:08.474: 	psycho-aq:    1
+14:31:08.474: 	GPU:          0
+14:31:08.474: 
+14:31:08.570: ---------------------------------
+14:31:08.571: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: 3
+14:31:08.571: 
+14:31:08.571: ==== Recording Start ===============================================
+14:31:08.571: [ffmpeg muxer: 'simple_file_output'] Writing file '/home/gfuentes/Videos/2022-07-18 14-31-08.mkv'...
+14:31:15.296: Stopping recording due to hotkey
+14:31:16.522: [ffmpeg muxer: 'simple_file_output'] Output of file '/home/gfuentes/Videos/2022-07-18 14-31-08.mkv' stopped
+14:31:16.522: Output 'simple_file_output': stopping
+14:31:16.522: Output 'simple_file_output': Total frames output: 203
+14:31:16.522: Output 'simple_file_output': Total drawn frames: 239
+14:31:16.522: ==== Recording Stop ================================================
+14:31:37.386: User Removed source 'Screen Capture (XSHM)' (xshm_input) from scene 'Scene'
+14:31:42.311: xshm-input: Geometry 2560x1440 @ 0,0
+14:31:42.313: User added source 'Screen Capture (XSHM)' (xshm_input) to scene 'Scene'
+14:32:05.941: Starting recording due to hotkey
+14:32:05.943: ---------------------------------
+14:32:05.943: [NVENC encoder: 'simple_h264_stream'] settings:
+14:32:05.943: 	rate_control: CBR
+14:32:05.943: 	bitrate:      2500
+14:32:05.943: 	cqp:          0
+14:32:05.943: 	keyint:       250
+14:32:05.943: 	preset:       hq
+14:32:05.943: 	profile:      high
+14:32:05.943: 	width:        1280
+14:32:05.943: 	height:       720
+14:32:05.943: 	2-pass:       false
+14:32:05.943: 	b-frames:     2
+14:32:05.943: 	psycho-aq:    1
+14:32:05.943: 	GPU:          0
+14:32:05.943: 
+14:32:06.042: ---------------------------------
+14:32:06.042: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: 3
+14:32:06.042: 
+14:32:06.042: ==== Recording Start ===============================================
+14:32:06.042: [ffmpeg muxer: 'simple_file_output'] Writing file '/home/gfuentes/Videos/2022-07-18 14-32-05.mkv'...
+14:32:25.834: [ffmpeg muxer: 'simple_file_output'] Output of file '/home/gfuentes/Videos/2022-07-18 14-32-05.mkv' stopped
+14:32:25.834: Output 'simple_file_output': stopping
+14:32:25.834: Output 'simple_file_output': Total frames output: 558
+14:32:25.834: Output 'simple_file_output': Total drawn frames: 594
+14:32:25.834: ==== Recording Stop ================================================
+14:32:47.941: Starting recording due to hotkey
+14:32:47.943: ---------------------------------
+14:32:47.943: [NVENC encoder: 'simple_h264_stream'] settings:
+14:32:47.943: 	rate_control: CBR
+14:32:47.943: 	bitrate:      2500
+14:32:47.943: 	cqp:          0
+14:32:47.943: 	keyint:       250
+14:32:47.943: 	preset:       hq
+14:32:47.943: 	profile:      high
+14:32:47.943: 	width:        1280
+14:32:47.943: 	height:       720
+14:32:47.943: 	2-pass:       false
+14:32:47.943: 	b-frames:     2
+14:32:47.943: 	psycho-aq:    1
+14:32:47.943: 	GPU:          0
+14:32:47.943: 
+14:32:48.044: ---------------------------------
+14:32:48.044: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: 3
+14:32:48.044: 
+14:32:48.045: ==== Recording Start ===============================================
+14:32:48.045: [ffmpeg muxer: 'simple_file_output'] Writing file '/home/gfuentes/Videos/2022-07-18 14-32-47.mkv'...
+14:35:16.124: Stopping recording due to hotkey
+14:35:17.369: [ffmpeg muxer: 'simple_file_output'] Output of file '/home/gfuentes/Videos/2022-07-18 14-32-47.mkv' stopped
+14:35:17.369: Output 'simple_file_output': stopping
+14:35:17.369: Output 'simple_file_output': Total frames output: 4444
+14:35:17.369: Output 'simple_file_output': Total drawn frames: 4480
+14:35:17.369: ==== Recording Stop ================================================
