@@ -10,26 +10,40 @@ super + Return
 super + @space
 	rofi -show-icons -show drun
 
-{alt} + Tab
+alt + Tab
 	rofi -show-icons -show window
 
-Print
+super + shift + f
 	flameshot gui
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
+
+
 #
 # bspwm hotkeys
 #
+
+#wifi
+super + shift + w
+	 ~/.config/scripts/wifi.sh
+
+#ranger
+super + f
+	ranger
+
+#shutdown meu
+ctrl + alt + Delete
+	rofi -show power-menu -modi power-menu:~/.config/scripts/rofi-power-menu
 
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
 
 # close and kill
-super + {_,shift + }w
+super + {_,shift + }q
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -49,7 +63,7 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,s,f}
+alt + {t,y,g,s}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # set the node flags

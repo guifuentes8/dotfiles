@@ -129,8 +129,14 @@ handle_image() {
     case "${mimetype}" in
         ## SVG
         # image/svg+xml|image/svg)
-        #     convert -- "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
-        #     exit 1;;
+         #    convert -- "${FILE_PATH}" "${IMAGE_CACHE_PATH}" && exit 6
+          #   exit 1;;
+	 image/svg+xml|image/svg)
+            rsvg-convert --keep-aspect-ratio --width "${DEFAULT_SIZE%x*}" "${FILE_PATH}" -o "${IMAGE_CACHE_PATH}.png" \
+                && mv "${IMAGE_CACHE_PATH}.png" "${IMAGE_CACHE_PATH}" \
+                && exit 6
+            exit 1;;
+
 
         ## DjVu
         # image/vnd.djvu)
