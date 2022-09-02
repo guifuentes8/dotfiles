@@ -1,0 +1,96 @@
+Primeiramente, atualize a sua USE flag e mais 2 outras flags em /etc/portage/make.conf
+
+USE="X pulseaudio elogind dbus jpeg -qt -kde -gnome"
+INPUT_DEVICES="libinput synaptics"
+VIDEO_CARDS="nvidia" #intel, amd, nouveau (nvidia open source)
+
+1 - Instale o driver da Nvidia
+
+USE="driver tools" emerge -av x11-drivers/nvidia-drivers
+
+2 - Instale o Xorg
+
+emerge --ask x11-base/xorg-server
+env-update
+source /etc/profile
+nvidia-xconfig
+
+Não se esqueça de editar o arquivo */etc/X11/xorg.conf* na Section **Device**
+
+Rode um lspci, pegue o id da sua placa de vídeo, no caso 01:00:0 - Rtx 3060
+**
+
+
+	BusID     "PCI:1:0:0"
+
+3 - Instale o Lightdm
+
+emerge --ask x11-misc/lightdm
+
+Edite o arquivo */etc/lightdm/lightdm.conf* e adicione a seguinte linha
+
+`greeter-session=lightdm-gtk-greeter`
+
+Edite o arquivo /etc/conf.d/display-manager
+DISPLAYMANAGER="lightdm"
+
+`rc-update add dbus default`
+
+
+`rc-update add display-manager default`
+
+
+4 - Instale o sudo
+
+Dê ao seu usuário, acesso ao wheel editando o arquivo */etc/sudoers*
+
+- Descomente as linhas onde dão previlégios para grupo wheel
+
+Digite *exit* e saia do root, entre com o seu usuário..
+
+5 - Instale bspwm e sxhkd
+
+sudo USE="examples" emerge -av x11-wm/bspwm x11-wm/sxhkd
+mkdir -vp ~/.config/bspwm ~/.config/sxhkd
+cp -v /usr/share/doc/bspwm-0.9.9/examples/bspwmrc ~/.config/bspwm/
+cp -v /usr/share/doc/bspwm-0.9.9/examples/sxhkdrc ~/.config/sxhkd/
+chmod +x ~/.config/bspwm/bspwmrc
+
+
+- Troque o terminal do urxvt para o kitty no arquivo .config/sxhkd/sxhkdrc
+    
+    super + Return
+    
+            kitty
+
+
+sudo USE="-pulseaudio" emerge -av media-sound/mpg123
+sudo emerge -av --autounmask=y --autounmask-write www-client/firefox:rapid
+
+sudo emerge -av setxkbmap numlockx polybar blueman luarocks xdg-desktop-portal-gtk luafilesystem pyyaml ranger feh nitrogen kitty lxappearance pavucontrol xterm dmenu vim neovim flatpak app-i18n/translate-shell net-im/discord-bin dev-vcs/git net-misc/ntp media-fonts/noto-cjk rofi tmux thunar neofetch libev
+libconfig flameshot imagemagick picom bpytop xrandr dunst task
+
+
+Caso haja dependências, aceite e use o comando *sudo dispatch-conf*
+
+Depois confirme com a letra *u*
+Rode novamente o comando para instalar os pacotes.
+
+Ajuste o horário local:
+
+```bash
+killall ntpd
+ntpd -q -g
+rc-update add ntpd default
+```
+
+mkdir -vp Documents Pictures Videos 
+
+cd dotfiles
+cp -r .config ~/. && cp .zshrc ~/.
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
+
+
