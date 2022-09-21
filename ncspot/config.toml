@@ -1,0 +1,25 @@
+use_nerd_font=true
+flip_status_indicators=true
+notify=true
+gapless=true
+bitrate=320
+cover_max_scale = 2
+
+[theme]
+background = "#0B0D0F00"
+primary = "#9580FF"
+secondary = "#8AFF8000"
+title = "#8AFF80"
+playing = "#8aff80"
+playing_selected = "#8AFF80"
+playing_bg = "#18181800"
+highlight = "#ffff80"
+highlight_bg = "#0B0D0F"
+error = "#0B0D0F"
+error_bg = "#FF9580"
+statusbar = "#0B0D0F"
+statusbar_progress = "#80FFEA"
+statusbar_bg = "#80FFEA"
+cmdline = "#8AFF80"
+cmdline_bg = "#0B0D0F"
+search_match = "#ff0000"

@@ -16,7 +16,9 @@
 .config/obs-studio
 .config/xfce4
 .config/Thunar
+.config/Code - OSS
 
 pavucontrol.ini
 mimeapps.list
 QtProject.conf
+

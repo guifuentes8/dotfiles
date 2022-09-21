@@ -1,0 +1,21 @@
+[org/gtk/settings/file-chooser]
+window-position=(1953, 0)
+window-size=(1124, 822)
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+show-type-column=true
+sidebar-width=156
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+
+[org/gnome/nautilus/preferences]
+search-filter-time-type='last_modified'
+default-folder-viewer='icon-view'
+
+[org/gnome/nautilus/window-state]
+initial-size=(1696, 700)
+maximized=false
