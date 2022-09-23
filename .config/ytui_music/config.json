@@ -4,9 +4,7 @@
   "ShortcutKeys": { }, -- For field description see info keys
 
   "Colors": {
-     -- These will be converted to RGB format. Eg; [0,0,0] is black and [0,255,0] is green.
-        All colors are written in same format
-    "border_idle": [
+     "border_idle": [
       255, -- Red color value. Can be range from 0-255.
       255, -- Green color value
       255  -- Blue color value
@@ -24,9 +22,7 @@
   },
 
   "Servers": {
-    "list": []              -- Array of invidious server instances to be used all of same version.
-                               v1 at time of writing
-  },
+    "list": []     },
 
   "Constants": {
     "refresh_rate": 900,    -- Refresh ui per this many millisecond. Setting this to too low value may
@@ -45,14 +41,7 @@
   },
 
   "MpvOptions": {
-    "config_path": "some-path" -- Configuration directory of mpv to be used
-                                If you want to use same config as you use in other application or in case you
-                                you want to use global mpv config. You may point this path to the directory where
-                                your mpv.conf file is stored.
-                                Tip: If you use any other tool instead of youtube-dl but provide same interface.
-                                    For instance, ytdlp.
-                                    You can specify `youtube-dl` key and point to ytdlp path
-  },
+    "config_path": "some-path"   },
 
   "Downloads": {
     "path": "some-directory", -- Directory on which to download music/playlist

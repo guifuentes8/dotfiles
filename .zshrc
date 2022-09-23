@@ -20,15 +20,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ALIAS
 
-# -> Void Linux
- alias xbi="sudo xbps-install"
- alias xbpkg="~/void-packages/./xbps-src pkg"
- alias xbu="sudo xbps-install -Sy"
- alias xbr="sudo xbps-remove -o"
- alias xbs="sudo xbps-query -Rs"
- alias locale-edit="sudo vim /etc/default/libc-locales"
- alias locale-gen="sudo xbps-reconfigure -f glibc-locales"
-
 # -> Spotify
  alias spt="ncspot"
  alias sptl="sptlrx --current 'bold,#8be9fd' --before '#bd93f9,faint,italic,strikethrough' --after '#ff79c6,faint'"

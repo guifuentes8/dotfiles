@@ -3,7 +3,7 @@
 set $mod Mod4
 
 # FONTS #
-font pango:monospace 8
+font pango:Hack Nerd Font 10
 
 # MOUSE FLOAT MODE #
 floating_modifier $mod
@@ -21,7 +21,7 @@ bindsym $mod+q kill
 bindsym $mod+x exec ~/.local/bin/lock
 
 # MENU #
-bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -show-icons -font "Hack Nerd Font 11" -show drun
 
 # WINDOW FOCUS #
 bindsym $mod+Left focus left
@@ -56,8 +56,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # BORDERS
-default_border pixel 3
+default_border pixel 2
 hide_edge_borders smart
+for_window [class="^.*"] border pixel 2
+#client.background       #000000
 client.focused #8aff80 #8aff80 #000000 #000000 #8aff80
 client.unfocused #9580ff #9580ff #000000 #000000 #9580ff
 
@@ -140,6 +142,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous && $refresh_i3stat
 # AUTO-START #
 exec --no-startup-id /usr/bin/pipewire
 exec --no-startup-id /usr/bin/pipewire-pulse
+exec --no-startup-id /usr/bin/wireplumber
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
