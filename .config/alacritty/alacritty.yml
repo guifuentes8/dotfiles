@@ -53,7 +53,7 @@ colors:
     white:   '0xffffff'
 
 window:
-      opacity: 0.8
+      opacity: 0.9
 
 font:
   normal:

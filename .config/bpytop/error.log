@@ -53,3 +53,54 @@ Traceback (most recent call last):
   File "/usr/bin/bpytop", line 1357, in refresh
     for f in os.listdir(d):
 FileNotFoundError: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+23/09/22 (15:43:55) | ERROR: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1357, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+23/09/22 (15:44:22) | ERROR: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1357, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+23/09/22 (15:47:15) | ERROR: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1357, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+24/09/22 (14:10:25) | ERROR: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1357, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+24/09/22 (15:11:13) | ERROR: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1357, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+24/09/22 (15:11:28) | ERROR: Exception when sending signal 9 to pid 14
+24/09/22 (15:11:28) | ERROR: [Errno 1] Operation not permitted
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 5479, in process_keys
+    os.kill(pid, sig)
+PermissionError: [Errno 1] Operation not permitted
+24/09/22 (15:32:21) | ERROR: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1357, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+24/09/22 (15:32:40) | ERROR: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1357, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+24/09/22 (15:42:32) | ERROR: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1357, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+24/09/22 (18:03:16) | ERROR: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 1357, in refresh
+    for f in os.listdir(d):
+FileNotFoundError: [Errno 2] No such file or directory: '/home/gfuentes/.config/bpytop/themes'

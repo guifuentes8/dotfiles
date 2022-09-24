@@ -1,0 +1,5 @@
+2022/09/24-17:39:03.973 1fcc Creating DB /home/gfuentes/.config/WebCord/Local Storage/leveldb since it was missing.
+2022/09/24-17:39:03.979 1fcc Reusing MANIFEST /home/gfuentes/.config/WebCord/Local Storage/leveldb/MANIFEST-000001
+2022/09/24-17:41:06.208 2518 Level-0 table #5: started
+2022/09/24-17:41:06.224 2518 Level-0 table #5: 510675 bytes OK
+2022/09/24-17:41:06.226 2518 Delete type=0 #3
