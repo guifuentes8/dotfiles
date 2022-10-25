@@ -38,6 +38,7 @@ in
       flameshot
       glib # gsettings
       gnome3.adwaita-icon-theme # default gnome cursors
+      gvfs
       himalaya
       kitty
       lxappearance
