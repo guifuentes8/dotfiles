@@ -7,6 +7,7 @@ in
     [
       # ./awesome.nix
       # ./i3.nix
+      ./greet.nix
       ./sway.nix
     ];
 

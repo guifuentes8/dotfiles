@@ -1,12 +1,6 @@
 { config, pkgs, lib, ... }:
 
 let
-  swayRun = pkgs.writeShellScript "sway-run" ''
-    export XDG_SESSION_TYPE=wayland
-    export XDG_SESSION_DESKTOP=sway
-    export XDG_CURRENT_DESKTOP=sway
-    systemd-run --user --scope --collect --quiet --unit=sway systemd-cat --identifier=sway ${pkgs.sway}/bin/sway $@
-  '';
   dbus-sway-environment = pkgs.writeTextFile {
     name = "dbus-sway-environment";
     destination = "/bin/dbus-sway-environment";
@@ -19,22 +13,8 @@ let
     '';
   };
 
+  #environment.pathsToLink = [ "/libexec" ]; # enable polkit
 
-  services.greetd = {
-    enable = true;
-    vt = 7;
-    restart = false;
-    settings = {
-      default_session = {
-        command = "${lib.makeBinPath [pkgs.greetd.tuigreet] }/tuigreet --time --cmd ${swayRun}";
-        user = "greeter";
-      };
-      initial_session = {
-        command = "${swayRun}";
-        user = "guifuentes8";
-      };
-    };
-  };
   configure-gtk = pkgs.writeTextFile {
     name = "configure-gtk";
     destination = "/bin/configure-gtk";
