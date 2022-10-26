@@ -52,10 +52,11 @@ in
       sptlrx
       tty-clock
       rofi
+      xdg-utils
       xfce.thunar
       xfce.thunar-volman
       xfce.thunar-archive-plugin
       xorg.xrandr
-
     ]);
+
 }

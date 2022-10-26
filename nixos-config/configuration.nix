@@ -8,8 +8,9 @@ in
   imports =
     [
       ./hardware-configuration.nix
-      ./hardware/nvidia.nix
-      ./window-manager/xorg/default.nix
+      ./modules/services.nix
+      ./modules/bluetooth.nix
+      ./window-manager/wayland/default.nix
       ./software/default.nix
       ./home-manager/home.nix
     ];
@@ -49,13 +50,7 @@ in
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
+
 
   # Automatic system upgrade
   system = {
@@ -77,12 +72,6 @@ in
     };
   };
 
-  # Services
-  services.printing.enable = true;
-  services.openssh = {
-    enable = true;
-  };
-  services.dbus.enable = true;
 
 
   # Fonts

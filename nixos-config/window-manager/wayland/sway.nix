@@ -1,12 +1,12 @@
 { config, pkgs, lib, ... }:
 
 let
-  # bash script to let dbus know about important env variables and
-  # propagate them to relevent services run at the end of sway config
-  # see
-  # https://github.com/emersion/xdg-desktop-portal-wlr/wiki/"It-doesn't-work"-Troubleshooting-Checklist
-  # note: this is pretty much the same as  /etc/sway/config.d/nixos.conf but also restarts  
-  # some user services to make sure they have the correct environment variables
+  swayRun = pkgs.writeShellScript "sway-run" ''
+    export XDG_SESSION_TYPE=wayland
+    export XDG_SESSION_DESKTOP=sway
+    export XDG_CURRENT_DESKTOP=sway
+    systemd-run --user --scope --collect --quiet --unit=sway systemd-cat --identifier=sway ${pkgs.sway}/bin/sway $@
+  '';
   dbus-sway-environment = pkgs.writeTextFile {
     name = "dbus-sway-environment";
     destination = "/bin/dbus-sway-environment";
@@ -19,12 +19,22 @@ let
     '';
   };
 
-  # currently, there is some friction between sway and gtk:
-  # https://github.com/swaywm/sway/wiki/GTK-3-settings-on-Wayland
-  # the suggested way to set gtk settings is with gsettings
-  # for gsettings to work, we need to tell it where the schemas are
-  # using the XDG_DATA_DIR environment variable
-  # run at the end of sway config
+
+  services.greetd = {
+    enable = true;
+    vt = 7;
+    restart = false;
+    settings = {
+      default_session = {
+        command = "${lib.makeBinPath [pkgs.greetd.tuigreet] }/tuigreet --time --cmd ${swayRun}";
+        user = "greeter";
+      };
+      initial_session = {
+        command = "${swayRun}";
+        user = "guifuentes8";
+      };
+    };
+  };
   configure-gtk = pkgs.writeTextFile {
     name = "configure-gtk";
     destination = "/bin/configure-gtk";
@@ -44,23 +54,20 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
+    configure-gtk
     dbus-sway-environment
     sway
     swayidle
     swaylock
   ];
 
-  # xdg-desktop-portal works by exposing a series of D-Bus interfaces
-  # known as portals under a well-known name
-  # (org.freedesktop.portal.Desktop) and object path
-  # (/org/freedesktop/portal/desktop).
-  # The portal interfaces include APIs for file access, opening URIs,
-  # printing and others.
   xdg.portal = {
     enable = true;
     wlr.enable = true;
     # gtk portal needed to make gtk apps happy
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+    ];
     gtkUsePortal = true;
   };
 

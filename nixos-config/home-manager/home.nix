@@ -9,4 +9,15 @@ in
       (import "${home-manager}/nixos")
       ./zsh.nix
     ];
+
+  xdg.mime = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "google-chrome-stable.desktop";
+      "x-scheme-handler/http" = "google-chrome-stable.desktop";
+      "x-scheme-handler/https" = "google-chrome-stable.desktop";
+      "x-scheme-handler/about" = "google-chrome-stable.desktop";
+      "x-scheme-handler/unknown" = "google-chrome-stable.desktop";
+    };
+  };
 }

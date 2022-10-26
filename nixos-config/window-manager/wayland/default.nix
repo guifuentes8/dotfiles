@@ -18,7 +18,6 @@ in
       bpytop
       cava
       cmatrix
-      configure-gtk
       dracula-theme # gtk theme
       dunst
       feh
@@ -39,8 +38,10 @@ in
       wayland
       wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
       wofi
+      xdg-utils
       xfce.thunar
       xfce.thunar-volman
       xfce.thunar-archive-plugin
     ]);
+
 }
