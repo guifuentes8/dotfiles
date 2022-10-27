@@ -4,16 +4,6 @@ let
 in
 {
 
-  services.xserver = {
-    desktopManager = {
-      gnome.enable = false;
-    };
-
-    displayManager = {
-      gdm.enable = true;
-    };
-  };
-
   # Gnome software install
   environment.systemPackages =
     (with pkgs; [
@@ -65,6 +55,4 @@ in
       seahorse
     ]);
 
-  # Gnome udev required
-  services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 }

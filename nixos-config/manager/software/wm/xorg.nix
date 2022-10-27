@@ -3,46 +3,37 @@
 let
 in
 {
-  imports =
-    [
-      # ./awesome.nix
-      # ./i3.nix
-      ./greet.nix
-      ./sway.nix
-    ];
-
-
   environment.systemPackages =
     (with pkgs;
     [
-      bemenu # wayland clone of dmenu
       bpytop
       cava
       cmatrix
-      dracula-theme # gtk theme
+      dmenu
+      dracula-theme
       dunst
       feh
       flameshot
-      glib # gsettings
-      gnome3.adwaita-icon-theme # default gnome cursors
+      glib
+      gnome3.adwaita-icon-theme
       gvfs
       himalaya
-      kitty # gpu accelerated terminal
+      kitty
       lxappearance
       mpv
+      nitrogen
       ncspot
       pavucontrol
+      picom
       playerctl
       ranger
       sptlrx
       tty-clock
-      wayland
-      wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
-      wofi
+      rofi
       xdg-utils
       xfce.thunar
       xfce.thunar-volman
       xfce.thunar-archive-plugin
+      xorg.xrandr
     ]);
-
 }

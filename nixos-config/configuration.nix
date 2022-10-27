@@ -8,11 +8,12 @@ in
   imports =
     [
       ./hardware-configuration.nix
-      ./modules/services.nix
-      ./modules/bluetooth.nix
-      ./window-manager/wayland/default.nix
-      ./software/default.nix
-      ./home-manager/home.nix
+      ./modules/nvidia.nix
+      ./manager/desktop/gnome.nix      
+      ./manager/login/lightdm.nix
+      ./manager/home/default.nix
+      ./manager/software/default.nix
+      ./manager/software/desktop/gnome.nix
     ];
 
   ##### SYSTEM BASE CONFIGURATION #####
@@ -45,6 +46,12 @@ in
     LC_TELEPHONE = "pt_BR.utf8";
     LC_TIME = "pt_BR.utf8";
   };
+
+  # Services
+ # services.dbus.enable = true;
+ # services.printing.enable = true;
+ # services.openssh.enable = true;
+ # services.gnome.gnome-keyring.enable = true;
 
   # Pulseaudio + Pipewire
   services.pipewire = {

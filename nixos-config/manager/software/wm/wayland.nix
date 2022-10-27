@@ -3,35 +3,13 @@
 let
 in
 {
-  imports =
-    [
-      # ./awesome.nix
-      # ./i3.nix
-      ./qtile.nix
-    ];
-  services.xserver = {
-    layout = "br";
-    xkbVariant = "";
-    enable = true;
-    libinput.enable = true;
-    displayManager = {
-      lightdm = {
-        enable = true;
-        background = pkgs.nixos-artwork.wallpapers.nineish.gnomeFilePath;
-        greeters = {
-          gtk.enable = true;
-        };
-      };
-    };
-  };
-
   environment.systemPackages =
     (with pkgs;
     [
+      bemenu # wayland clone of dmenu
       bpytop
       cava
       cmatrix
-      dmenu
       dracula-theme # gtk theme
       dunst
       feh
@@ -40,23 +18,21 @@ in
       gnome3.adwaita-icon-theme # default gnome cursors
       gvfs
       himalaya
-      kitty
+      kitty # gpu accelerated terminal
       lxappearance
       mpv
-      nitrogen
       ncspot
       pavucontrol
-      picom
       playerctl
       ranger
       sptlrx
       tty-clock
-      rofi
+      wayland
+      wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
+      wofi
       xdg-utils
       xfce.thunar
       xfce.thunar-volman
       xfce.thunar-archive-plugin
-      xorg.xrandr
     ]);
-
 }
