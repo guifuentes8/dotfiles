@@ -8,12 +8,25 @@ in
   imports =
     [
       ./hardware-configuration.nix
-      ./modules/nvidia.nix
-      ./manager/desktop/gnome.nix      
-      ./manager/login/lightdm.nix
+
+      #wayland
+
+      ./modules/bluetooth.nix
       ./manager/home/default.nix
+      ./manager/login/greetd.nix
       ./manager/software/default.nix
-      ./manager/software/desktop/gnome.nix
+      ./manager/software/wm/wayland.nix
+      ./manager/wm/wayland/sway.nix
+
+      #gnome
+
+      #      ./modules/nvidia.nix
+      #      ./manager/desktop/gnome.nix      
+      #      ./manager/login/lightdm.nix
+      #      ./manager/home/default.nix
+      #      ./manager/software/default.nix
+      #      ./manager/software/desktop/gnome.nix
+
     ];
 
   ##### SYSTEM BASE CONFIGURATION #####
@@ -48,10 +61,10 @@ in
   };
 
   # Services
- # services.dbus.enable = true;
- # services.printing.enable = true;
- # services.openssh.enable = true;
- # services.gnome.gnome-keyring.enable = true;
+  # services.dbus.enable = true;
+  # services.printing.enable = true;
+  # services.openssh.enable = true;
+  # services.gnome.gnome-keyring.enable = true;
 
   # Pulseaudio + Pipewire
   services.pipewire = {
