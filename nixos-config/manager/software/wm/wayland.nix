@@ -13,9 +13,9 @@ in
       dracula-theme # gtk theme
       dunst
       feh
-      flameshot
       glib # gsettings
       gnome3.adwaita-icon-theme # default gnome cursors
+      grim
       gvfs
       himalaya
       kitty # gpu accelerated terminal
@@ -25,8 +25,10 @@ in
       pavucontrol
       playerctl
       ranger
+      slurp
       sptlrx
       tty-clock
+      waybar
       wayland
       wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
       wofi
