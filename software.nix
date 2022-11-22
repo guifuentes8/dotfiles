@@ -18,23 +18,30 @@ in
 
   environment.systemPackages = (with pkgs; [
 
-    # default 
+    # softwares default 
     bitwarden
-    davinci-resolve
+    unstable.davinci-resolve
+    dbeaver
+    discord
     ffmpeg
     firefox-devedition-bin
     fragments
     gh
     git
     glxinfo
+    gnumake
     google-chrome
     imagemagick
+    mattermost-desktop
     nixpkgs-fmt
-    nodejs
+    #nodejs
+    nodejs-16_x
     obs-studio
     onlyoffice-bin
     pfetch
+    python38
     sassc
+    slack
     unzip
     vscode
     vim
@@ -44,14 +51,12 @@ in
     # gnome
     contrast
     drawio
-    discord
     foliate
     gaphor
     gnome-feeds
     marker
-    mattermost-desktop
     pdfslicer
-    slack
+    shortwave
     unstable.adw-gtk3
 
 

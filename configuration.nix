@@ -98,8 +98,6 @@ in
       enable = true;
       libinput.enable = true;
       displayManager = {
-        autoLogin.enable = true;
-        autoLogin.user = "guifuentes8";
         gdm.enable = true;
         lightdm = {
           enable = false;
