@@ -7,11 +7,13 @@ in
     (import "${home-manager}/nixos")
   ];
 
-  programs.ssh.askPassword = "";
   programs.zsh = {
     enable = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
+    shellInit = ''
+      unset -v SSH_ASKPASS
+    '';
     ohMyZsh = {
       enable = true;
       plugins = [ "git" ];
