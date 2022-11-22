@@ -6,6 +6,8 @@ in
   imports = [
     (import "${home-manager}/nixos")
   ];
+
+  programs.ssh.askPassword = "";
   programs.zsh = {
     enable = true;
     autosuggestions.enable = true;
