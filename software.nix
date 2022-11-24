@@ -18,37 +18,43 @@ in
 
   environment.systemPackages = (with pkgs; [
 
-    # softwares default 
+    # Environtment Dev Packages #
+    python2
+    python38
+    gcc
+    sassc
+    sqlite
+    # Web
+    git
+    gh
+    nodejs
+    yarn
+    # Nix
+    nixpkgs-fmt
+    # Environtment Dev Packages #
+
+    # Softwares default 
     bitwarden
-    unstable.davinci-resolve
+    davinci-resolve
     dbeaver
     discord
     ffmpeg
     firefox-devedition-bin
     fragments
-    gh
-    git
     glxinfo
-    gnumake
     google-chrome
     imagemagick
     mattermost-desktop
-    nixpkgs-fmt
-    #nodejs
-    nodejs-16_x
     obs-studio
     onlyoffice-bin
     pfetch
-    python38
-    sassc
     slack
     unzip
     vscode
     vim
     wget
-    yarn
 
-    # gnome
+    # Gnome
     contrast
     drawio
     foliate
@@ -56,9 +62,7 @@ in
     gnome-feeds
     marker
     pdfslicer
-    shortwave
     unstable.adw-gtk3
-
 
     # wm - xorg
     #      bpytop
@@ -128,7 +132,9 @@ in
       gnome-themes-extra
       gnome-todo
       gnome-tweaks
+      #gnome-boxes
     ])
+
 
   # Gnome extensions install
   ++ (with pkgs.gnomeExtensions;
@@ -141,6 +147,7 @@ in
       force-quit
       gnome-40-ui-improvements
       lock-keys
+      noannoyance-2
       runcat
       sound-output-device-chooser
       spotify-tray

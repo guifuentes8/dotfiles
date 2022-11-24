@@ -79,6 +79,7 @@ in
 
   # Services
   services = {
+    flatpak.enable = true;
     printing.enable = true;
     udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
