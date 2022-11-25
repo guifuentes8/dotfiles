@@ -17,7 +17,7 @@
         useOSProber = true;
         efiSupport = true;
         default = "saved";
-        devices = [ "nodev" ];
+        device = "nodev";
       };
       efi = {
         canTouchEfiVariables = true;
@@ -121,7 +121,7 @@
           enable = false;
         };
       };
-      videoDrivers = [ "nvidia" ];
+      videoDrivers = [ "nvidia" "nomodeset" ];
       deviceSection = ''
         Option "DRI" "2"
         Option "TearFree" "true"
@@ -143,6 +143,7 @@
     nvidia = {
       modesetting.enable = true;
       powerManagement.enable = true;
+      nvidiaPersistenced = true;
       package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
   };
