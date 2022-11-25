@@ -150,7 +150,6 @@ in
       noannoyance-2
       runcat
       sound-output-device-chooser
-      spotify-tray
       tactile
       task-widget
     ]);
