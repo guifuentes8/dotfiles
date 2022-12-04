@@ -38,6 +38,7 @@ in
     xorg.xkill
 
     # Gnome
+    adw-gtk3
     contrast
     foliate
     gaphor
