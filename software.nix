@@ -18,51 +18,54 @@ in
 
   environment.systemPackages = (with pkgs; [
 
-    # Environtment Dev Packages #
-    python2
-    python38
-    gcc
-    sassc
-    sqlite
-    # Web
-    git
-    gh
-    nodejs
-    yarn
-    # Nix
-    nixpkgs-fmt
-    # Environtment Dev Packages #
-
-    # Softwares default 
     bitwarden
     davinci-resolve
     dbeaver
     discord
-    ffmpeg
-    firefox-devedition-bin
     fragments
-    glxinfo
+    figma-linux
+    firefox
     google-chrome
-    imagemagick
+    kitty
     mattermost-desktop
     obs-studio
-    onlyoffice-bin
-    pfetch
+    postman
     slack
-    unzip
+    teamviewer
     vscode
     vim
     wget
+    xorg.xkill
 
     # Gnome
     contrast
-    drawio
     foliate
     gaphor
     gnome-feeds
     marker
     pdfslicer
-    unstable.adw-gtk3
+    spotify
+
+    # Environment Packages
+    python2
+    python38
+    gcc
+    glxinfo
+    sassc
+    sqlite
+    imagemagick
+    pfetch
+    unzip
+    ffmpeg
+
+    # Web
+    git
+    gh
+    nodejs
+    yarn
+
+    # Nix
+    nixpkgs-fmt
 
     # wm - xorg
     #      bpytop
@@ -77,7 +80,6 @@ in
     #      gnome3.adwaita-icon-theme
     #      gvfs
     #      himalaya
-    #      kitty
     #      lxappearance
     #      mpv
     #      nitrogen
@@ -108,7 +110,6 @@ in
     #      grim
     #      gvfs
     #      himalaya
-    #      kitty # gpu accelerated terminal
     #      lxappearance
     #      mpv
     #      ncspot
@@ -132,7 +133,7 @@ in
       gnome-themes-extra
       gnome-todo
       gnome-tweaks
-      #gnome-boxes
+      gnome-boxes
     ])
 
 
