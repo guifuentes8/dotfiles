@@ -145,13 +145,12 @@ in
       caffeine
       clipboard-history
       color-picker
-      eye-extended
       force-quit
       gnome-40-ui-improvements
       lock-keys
       noannoyance-2
       runcat
-      sound-output-device-chooser
+      spotify-tray
       tactile
       task-widget
     ]);
