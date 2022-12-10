@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ./home.nix
       ./software.nix
+      ./configuration-note.nix
     ];
 
   # Boot and Kernel 
@@ -87,6 +88,7 @@
       xkbVariant = "abnt2";
       enable = true;
       libinput.enable = true;
+      excludePackages = [ pkgs.xterm ];
       displayManager = {
         gdm.enable = true;
         lightdm = {
