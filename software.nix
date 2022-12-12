@@ -17,7 +17,6 @@ in
   };
 
   environment.systemPackages = (with pkgs; [
-
     bitwarden
     davinci-resolve
     dbeaver
@@ -87,23 +86,25 @@ in
       dash2dock-lite
       docker
       draw-on-you-screen-2
+      emoji-selector
+      eye-extended
       force-quit
       gnome-40-ui-improvements
       gtk3-theme-switcher
       gsconnect
       lock-keys
       middle-click-to-close-in-overview
-      mpris-label
       muteunmute
       notification-timeout
       panel-corners
+      remove-alttab-delay-v2
       replace-activities-text
       show-desktop-button
-      simple-system-monitor
       space-bar
       tactile
       task-widget
       user-avatar-in-quick-settings
+      vitals
       wallpaper-switcher
       wayland-or-x11
       window-is-ready-remover
