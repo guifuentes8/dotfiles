@@ -183,8 +183,8 @@
     settings.auto-optimise-store = true;
     gc = {
       automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
+      dates = "daily";
+      options = "--delete-older-than 4d";
     };
   };
 
@@ -194,7 +194,7 @@
     autoUpgrade = {
       enable = true;
       channel = "https://nixos.org/channels/nixos-22.11";
-      allowReboot = true;
+      allowReboot = false;
       dates = "daily";
     };
   };
