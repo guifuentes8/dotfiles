@@ -3,6 +3,7 @@ let
   unstableTarball =
     fetchTarball
       https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;
+  yarn-16-18 = pkgs.callPackage ./yarn-16-18.nix { };
 in
 {
   # NixPkgs config
@@ -61,8 +62,13 @@ in
     # Web
     git
     gh
-    nodejs
-    yarn
+    nodejs-16_x
+    yarn-16-18
+    # yarn
+
+    # Docker
+    docker-compose
+    lsof
 
     # Nix
     nixpkgs-fmt

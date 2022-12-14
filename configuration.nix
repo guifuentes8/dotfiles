@@ -1,12 +1,11 @@
 { config, pkgs, ... }:
-
 {
   imports =
     [
       ./hardware-configuration.nix
       ./home.nix
       ./software.nix
-      ./configuration-note.nix
+      # ./configuration-note.nix
     ];
 
   # Boot and Kernel 
@@ -72,6 +71,11 @@
     teamviewer.enable = true;
     printing.enable = true;
     udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+    postgresql = {
+      enable = true;
+      package = pkgs.postgresql_15;
+      enableTCPIP = true;
+    };
 
     # Sound with Pipewire
     pipewire = {
@@ -156,10 +160,15 @@
     users.guifuentes8 = {
       isNormalUser = true;
       description = "Guilherme Fuentes";
-      extraGroups = [ "networkmanager" "wheel" "video" ];
+      extraGroups = [ "networkmanager" "wheel" "video" "docker" ];
       shell = pkgs.zsh;
     };
   };
+
+  virtualisation.docker.enable = true;
+  virtualisation.podman.enable = true;
+
+
 
   # Environment
   environment = {
