@@ -87,7 +87,6 @@ in
       docker
       draw-on-you-screen-2
       emoji-selector
-      eye-extended
       force-quit
       gnome-40-ui-improvements
       gtk3-theme-switcher
@@ -96,6 +95,7 @@ in
       middle-click-to-close-in-overview
       muteunmute
       notification-timeout
+      noannoyance-2
       panel-corners
       remove-alttab-delay-v2
       replace-activities-text
