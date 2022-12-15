@@ -3,7 +3,9 @@ let
   unstableTarball =
     fetchTarball
       https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz;
-  yarn-16-18 = pkgs.callPackage ./yarn-16-18.nix { };
+  yarn-16-18 = pkgs.callPackage ./pkgs/yarn-16-18.nix { };
+  tokyo-night = pkgs.callPackage ./pkgs/tokyo-night.nix { };
+
 in
 {
   # NixPkgs config
@@ -16,8 +18,16 @@ in
       };
     };
   };
+  environment.extraInit = ''
+    if [ -d "~/.themes/" ]; then
+    mkdir ~/.themes/
+    fi 
+        ln -sf "${tokyo-night}/share/themes/Tokyonight-Dark-BL" ~/.themes/
+        ln -sf "${tokyo-night}/share/themes/Tokyonight-Dark-BL/gtk-4.0/gtk.css" ~/.config/gtk-4.0/gtk.css
 
+  '';
   environment.systemPackages = (with pkgs; [
+
     bitwarden
     davinci-resolve
     dbeaver
@@ -37,7 +47,7 @@ in
     xorg.xkill
 
     # Gnome
-    adw-gtk3
+
     contrast
     endeavour
     foliate
@@ -46,6 +56,7 @@ in
     marker
     pdfslicer
     spotify
+
 
     # Environment Packages
     python2

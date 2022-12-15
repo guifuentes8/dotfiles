@@ -5,7 +5,7 @@
       ./hardware-configuration.nix
       ./home.nix
       ./software.nix
-      # ./configuration-note.nix
+      ./configuration-note.nix
     ];
 
   # Boot and Kernel 
@@ -164,6 +164,7 @@
       shell = pkgs.zsh;
     };
   };
+
 
   virtualisation.docker.enable = true;
   virtualisation.podman.enable = true;
