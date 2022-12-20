@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }:
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
+  tokyo-night = pkgs.callPackage ./pkgs/build/tokyo-night.nix { };
 in
 {
   imports = [
@@ -11,12 +12,10 @@ in
     home.stateVersion = "22.11";
     gtk = {
       enable = true;
-      cursorTheme.name = "capitaine-cursors";
-      cursorTheme.package = pkgs.capitaine-cursors;
-      iconTheme.name = "Colloid-dark";
-      iconTheme.package = pkgs.colloid-icon-theme;
-      theme.package = pkgs.colloid-gtk-theme;
-      theme.name = "Colloid-Dark";
+      cursorTheme.name = "Bibata-Modern-Ice";
+      cursorTheme.package = pkgs.bibata-cursors;
+      theme.package = tokyo-night;
+      theme.name = "Tokyonight-Dark-B";
     };
   };
 
