@@ -1,0 +1,24 @@
+.config/discord/
+.config/Code/
+.config/google-chrome
+.config/spotify
+.config/pulse
+.config/flameshot
+.config/nautilus
+.config/dconf
+.config/glib-2.0
+.config/gtk-2.0
+.config/gtk-3.0
+.config/gtk-4.0
+.config/pulse
+.config/pulse
+.config/autostart
+.config/obs-studio
+.config/xfce4
+.config/Thunar
+.config/Code - OSS
+
+pavucontrol.ini
+mimeapps.list
+QtProject.conf
+
