@@ -1,0 +1,36 @@
+{ pkgs, ... }:
+{
+  environment.systemPackages = (with pkgs.gnomeExtensions; [
+    appindicator
+    burn-my-windows
+    caffeine
+    clipboard-history
+    color-picker
+    color-app-menu-icon-for-gnome-40
+    dash2dock-lite
+    docker
+    draw-on-you-screen-2
+    emoji-selector
+    force-quit
+    gnome-40-ui-improvements
+    gtk3-theme-switcher
+    gsconnect
+    lock-keys
+    middle-click-to-close-in-overview
+    muteunmute
+    notification-timeout
+    noannoyance-2
+    panel-corners
+    remove-alttab-delay-v2
+    replace-activities-text
+    show-desktop-button
+    space-bar
+    tactile
+    task-widget
+    user-avatar-in-quick-settings
+    vitals
+    wallpaper-switcher
+    wayland-or-x11
+    window-is-ready-remover
+  ]);
+}

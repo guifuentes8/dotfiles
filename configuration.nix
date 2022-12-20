@@ -4,8 +4,7 @@
     [
       ./hardware-configuration.nix
       ./home.nix
-      ./software.nix
-      ./configuration-note.nix
+      ./pkgs/default.nix
     ];
 
   # Boot and Kernel 
@@ -104,7 +103,9 @@
         };
       };
       desktopManager = {
-        gnome.enable = true;
+        gnome = {
+          enable = true;
+        };
       };
       windowManager = {
         i3 = {
