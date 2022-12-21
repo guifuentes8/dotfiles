@@ -67,6 +67,7 @@
 
   # Services
   services = {
+    flatpak.enable = true;
     teamviewer.enable = true;
     printing.enable = true;
     udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];

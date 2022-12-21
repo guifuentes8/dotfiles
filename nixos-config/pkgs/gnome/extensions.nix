@@ -2,7 +2,6 @@
 {
   environment.systemPackages = (with pkgs.gnomeExtensions; [
     appindicator
-    burn-my-windows
     caffeine
     clipboard-history
     color-picker
@@ -14,17 +13,17 @@
     gsconnect
     lock-keys
     middle-click-to-close-in-overview
+    mpris-label
     muteunmute
     notification-timeout
+    notification-banner-position
     noannoyance-2
+    no-activities-button
     remove-alttab-delay-v2
-    replace-activities-text
     show-desktop-button
     tactile
     task-widget
-    user-avatar-in-quick-settings
     vitals
     wayland-or-x11
-    window-is-ready-remover
   ]);
 }
