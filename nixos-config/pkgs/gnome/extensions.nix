@@ -16,8 +16,6 @@
     mpris-label
     muteunmute
     notification-timeout
-    notification-banner-position
-    noannoyance-2
     no-activities-button
     remove-alttab-delay-v2
     show-desktop-button
