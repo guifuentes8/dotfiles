@@ -16,7 +16,9 @@ in
     ffmpeg
     git
     gh
+    #nodejs-16_x
     nodejs
+    nodePackages.expo-cli
     docker-compose
     lsof
     nixpkgs-fmt

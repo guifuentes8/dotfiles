@@ -21,6 +21,7 @@ in
 
     programs = {
       alacritty = {
+        enable = true;
         settings = {
           # Colors (Tokyo Night: Storm variant)
           # Source: https://github.com/zatchheems/tokyo-night-alacritty-theme
