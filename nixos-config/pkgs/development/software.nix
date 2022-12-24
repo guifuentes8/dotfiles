@@ -14,8 +14,6 @@ in
     pfetch
     unzip
     ffmpeg
-    git
-    gh
     #nodejs-16_x
     nodejs
     nodePackages.expo-cli

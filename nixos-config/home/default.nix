@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
 let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-22.11.tar.gz";
-  tokyo-night = pkgs.callPackage ./pkgs/build/tokyo-night.nix { };
 in
 {
   imports = [
@@ -20,6 +19,27 @@ in
     };
 
     programs = {
+      gh = {
+        enable = true;
+        enableGitCredentialHelper = true;
+      };
+      git = {
+        enable = true;
+        userName = "Guilherme Fuentes";
+        userEmail = "guifuents8@gmail.com";
+        aliases = {
+          a = "add .";
+          co = "checkout";
+          cn = "checkout -b ";
+          cm = "commit";
+          ps = "push";
+          pl = "pull";
+          fe = "fetch";
+          st = "status";
+          undo = "reset HEAD~1 --hard";
+        };
+      };
+
       alacritty = {
         enable = true;
         settings = {

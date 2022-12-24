@@ -4,7 +4,6 @@
     alacritty
     bitwarden
     dbeaver
-    discord
     fragments
     figma-linux
     firefox

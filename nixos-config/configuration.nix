@@ -3,24 +3,27 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./home.nix
+      ./modules/notebook-prime/default.nix
+      ./services/default.nix
+      ./home/default.nix
       ./pkgs/default.nix
     ];
 
   # Boot and Kernel 
   boot = {
     loader = {
-      grub = {
-        version = 2;
-        enable = true;
-        useOSProber = true;
-        efiSupport = true;
-        default = "saved";
-        device = "nodev";
-      };
+      systemd-boot.enable = true;
+      # grub = {
+      #   version = 2;
+      #   enable = true;
+      #   useOSProber = true;
+      #   efiSupport = true;
+      #   default = "saved";
+      #   device = "nodev";
+      # };
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot/efi";
+        #efiSysMountPoint = "/boot/efi";
       };
     };
     extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ]; # Extra modules in kernel
@@ -71,11 +74,6 @@
     teamviewer.enable = true;
     printing.enable = true;
     udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
-    postgresql = {
-      enable = true;
-      package = pkgs.postgresql_15;
-      enableTCPIP = true;
-    };
 
     # Sound with Pipewire
     pipewire = {
@@ -165,8 +163,7 @@
     };
   };
 
-  virtualisation.docker.enable = true;
-  virtualisation.podman.enable = true;
+
 
   # Environment
   environment = {
@@ -202,7 +199,7 @@
       enable = true;
       channel = "https://nixos.org/channels/nixos-22.11";
       allowReboot = true;
-      dates = "daily";
+      dates = "12:30";
     };
   };
 }
