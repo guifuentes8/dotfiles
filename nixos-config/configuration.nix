@@ -3,7 +3,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./modules/notebook-prime/default.nix
+      #./modules/notebook-prime/default.nix
       ./services/default.nix
       ./home/default.nix
       ./pkgs/default.nix
@@ -12,18 +12,18 @@
   # Boot and Kernel 
   boot = {
     loader = {
-      systemd-boot.enable = true;
-      # grub = {
-      #   version = 2;
-      #   enable = true;
-      #   useOSProber = true;
-      #   efiSupport = true;
-      #   default = "saved";
-      #   device = "nodev";
-      # };
+      # systemd-boot.enable = true;
+      grub = {
+        version = 2;
+        enable = true;
+        useOSProber = true;
+        efiSupport = true;
+        default = "saved";
+        device = "nodev";
+      };
       efi = {
         canTouchEfiVariables = true;
-        #efiSysMountPoint = "/boot/efi";
+        efiSysMountPoint = "/boot/efi";
       };
     };
     extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ]; # Extra modules in kernel
@@ -70,6 +70,10 @@
 
   # Services
   services = {
+    postgresql = {
+      enable = true;
+      package = pkgs.postgresql_15;
+    };
     flatpak.enable = true;
     teamviewer.enable = true;
     printing.enable = true;
@@ -158,7 +162,7 @@
     users.guifuentes8 = {
       isNormalUser = true;
       description = "Guilherme Fuentes";
-      extraGroups = [ "networkmanager" "wheel" "video" "docker" ];
+      extraGroups = [ "networkmanager" "wheel" "video" "docker" "adbusers" ];
       shell = pkgs.zsh;
     };
   };

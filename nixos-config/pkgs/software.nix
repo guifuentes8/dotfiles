@@ -2,11 +2,13 @@
 {
   environment.systemPackages = (with pkgs; [
     alacritty
+    android-studio
     bitwarden
     dbeaver
     fragments
     figma-linux
     firefox
+    google-chrome
     mattermost-desktop
     obs-studio
     postman

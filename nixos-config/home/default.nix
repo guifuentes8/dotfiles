@@ -82,7 +82,7 @@ in
   };
 
   programs = {
-
+    adb.enable = true;
     dconf.enable = true;
     steam = {
       enable = true;
